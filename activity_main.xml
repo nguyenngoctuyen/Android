@@ -1,102 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:too1ls="http://schemas.android.com/tools"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.vd_bmi.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.admin.myapplication.MainActivity">
+
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:gravity="center"
-            android:text="Chương trình tính chỉ số BMI"
-            android:textSize="20sp" />
-
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nhập Tên: "
+                android:text="a = "
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/ten"
+                android:id="@+id/eda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="20sp" />
+                android:layout_weight="1" />
+
         </TableRow>
 
         <TableRow>
 
             <TextView
+                android:id="@+id/b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chiều cao: "
+                android:text="b = "
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/cao"
+                android:id="@+id/edb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="20sp" />
+                android:layout_weight="1" />
         </TableRow>
 
         <TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Cân nặng: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/can"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textSize="20sp" />
-        </TableRow>
-
-        <Button
-            android:id="@+id/tinh"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Tính BMI"
-            android:textSize="20sp"
-
-            />
-
-        <TableRow>
-             <TextView
-                 android:text="BMI:"
-                 android:textSize="20sp"
-                 android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/kqBMI"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
+            <Button
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="+"
+                android:id="@+id/tong"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:id="@+id/tru"
                 />
         </TableRow>
         <TableRow>
-            <TextView
-                android:text="Chuẩn đoán: "
-                android:textSize="20sp"
-                />
-            <TextView
-                android:id="@+id/kqcd"
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="*"
+                android:id="@+id/nhan"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="/"
+                android:id="@+id/chia"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textSize="20sp"/>
+                android:text="Ket qua: "
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/kq"
+                />
+
         </TableRow>
     </TableLayout>
-
 </LinearLayout>
